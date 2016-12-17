@@ -1,0 +1,108 @@
+html, body {
+	margin: 0;
+	padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+body {
+	background: url(img/left-cloud.png) 0 0 / cover,
+    url(img/right-cloud.png) 100% 0 / cover,
+    url(img/Earth.png) 50% 100% / 100% auto,
+    url(img/Background.jpg) center top / cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;;
+}
+img {
+  position: absolute;
+  height: auto;
+  max-width: 100%;
+}
+
+.wrap {
+  height: 100%;
+  width: 100%;
+  min-width: 480px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+
+
+
+}
+.scene, .layer {
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.scene {
+  overflow: hidden;
+  position: relative;
+}
+.left_child_1 {
+  top: 30vh;
+  width: 35%;
+  left: 3%;
+}
+.left_child_2 {
+  top: 30vh;
+  width: 17%;
+  left: 20%;
+}
+.left_child_3 {
+  top: 30vh;
+  width: 15%;
+  left: 32%;
+}
+.cat {
+  top: 20vh;
+  width: 26%;
+  left: 37%;
+}
+.right_child_1 {
+  top: 30vh;
+  width: 15%;
+  left: 51%;
+}
+.right_child_2 {
+  top: 30vh;
+  width: 18%;
+  left: 60%;
+}
+.right_child_3 {
+  top: 30vh;
+  width: 23%;
+  left: 70%;
+}
+
+.catfly {
+  animation: catfly 4s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.wave{
+  animation: wave 8s 0.1s infinite linear;
+}
+.wave_reverse {
+  animation: wave 8s 0.1s infinite reverse linear;
+}
+
+@keyframes catfly {
+  100% {
+    transform: translate3d(0,3%,0);
+  }
+
+  0% {
+    transform: translate3d(0,-3%,0);
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: rotateZ(0deg) translate3d(0,2%,0) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg) translate3d(0,2%,0) rotateZ(-360deg);
+  }
+}

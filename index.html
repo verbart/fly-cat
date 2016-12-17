@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>FlyCat</title>
+	<link rel="stylesheet" href="style.css">
+	<script src='js/parallax.js'></script>
+	<script src='js/retina.min.js'></script>
+</head>
+<body>
+	<div class="wrap">
+		<ul id="scene" class="scene">
+		  <li class="layer layer-h" data-depth="0.10">
+		  	<img class="left_child_3 wave" src="img/3-left.png">
+		  </li>
+		  <li class="layer layer-h" data-depth="0.20">
+		  	<img class="left_child_2 wave_reverse" src="img/2-left.png">
+		  </li>
+		  <li class="layer layer-h" data-depth="0.30">
+		  	<img class="left_child_1 wave" src="img/1-left.png">
+		  </li>
+		  <li class="layer layer-h" data-depth="0.10">
+		  	<img class="right_child_1 wave_reverse" src="img/4-right.png">
+		  </li>
+		  <li class="layer layer-h" data-depth="0.20">
+		  	<img class="right_child_2 wave" src="img/5-right.png">
+		  </li>
+		  <li class="layer layer-h" data-depth="0.30">
+		  	<img class="right_child_3 wave_reverse" src="img/6-right.png">
+		  </li>
+		  <li class="layer layer-v" data-depth="1.00">
+		  	<img class="cat catfly" src="img/cat.png">
+		  </li>
+		</ul>
+
+	<script>
+		var scene = document.getElementById('scene');
+		var parallax = new Parallax(scene);
+	</script>
+</body>
+</html>
